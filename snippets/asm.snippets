@@ -1,0 +1,33 @@
+snippet main
+	.text
+	.arm
+	.global _start
+	_start:
+		     b reset
+		     b loop
+		     b loop
+		     b loop
+		     b loop
+		     nop
+		     b loop
+		     b loop
+
+	 /* ==============================
+	 *  CODIGO
+	 *  ==============================
+	 */
+
+	 reset:
+
+	loop:   b loop
+	 /* ==============================
+	 *  CONSTANTES
+	 *  ==============================
+	 */
+	 CTE1: .word 0x1231AAAA
+	 .end
+
+snippet for
+	mov 
+	subs
+	bne	
