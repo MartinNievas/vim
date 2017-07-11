@@ -103,13 +103,25 @@ snippet subp
 	% subparagraph $2 (end)
 snippet itd
 	\item[${1:description}] ${2:item}
-snippet figure
-	${1:Figure}~\ref{${2:fig:}}${3}
+snippet fig
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.5]{${1}} 
+	\caption{${2:caption}}
+	\label{${3:caption}}
+	\end{figure}
+	${4}
 snippet table
 	${1:Table}~\ref{${2:tab:}}${3}
-snippet listing
-	${1:Listing}~\ref{${2:list}}${3}
+snippet list
+	\begin{lstlisting}
+		${1}
+	\end{lstlisting}
 snippet section
 	${1:Section}~\ref{${2:sec:}}${3}
 snippet page
 	${1:page}~\pageref{${2}}${3}
+snippet cent
+	\begin{center}
+	${1}
+	\end{center}
