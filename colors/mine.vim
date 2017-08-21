@@ -21,4 +21,7 @@ endif
 let colors_name = "default"
 
 hi Search		term=bold cterm=bold ctermfg=17 ctermbg=190 gui=bold guifg=#00005f guibg=#dfff00 
+hi Folded   ctermfg=255 ctermbg=238 guifg=#ffffff guibg=#444444
+hi FoldColumn  ctermfg=255 ctermbg=238 guifg=#ffffff guibg=#444444
+
 " vim: sw=2

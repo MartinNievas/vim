@@ -9,6 +9,7 @@ execute pathogen#infect()
 filetype plugin on
 filetype indent on
 
+
 set encoding=utf-8
 
 set grepprg=grep\ -nH\ $*
@@ -69,10 +70,21 @@ let g:airline#extensions#tabline#enabled = 1
 :map <c-L> <ESC>:colorscheme shine<RETURN>
 :map <c-O> <ESC>:colorscheme mine<RETURN>
 
-"" Resaltado de sintaxis en la búsqueda
+
+"" Resaltado de sibtaxis en la búsqueda
 :set hls
+nnoremap <F3> :set hlsearch!<CR>
 
 colorscheme mine
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"fuentes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" personal map
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" personal map
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " unicode symbols
  let g:airline_left_sep = '»'
