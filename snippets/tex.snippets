@@ -107,8 +107,8 @@ snippet fig
 	\begin{figure}
 	\centering
 	\includegraphics[scale=.5]{${1}} 
-	\caption{${2:caption}}
-	\label{${3:caption}}
+	\caption{${3:caption}}
+	\label{${2:label}}
 	\end{figure}
 	${4}
 snippet table
@@ -125,3 +125,33 @@ snippet cent
 	\begin{center}
 	${1}
 	\end{center}
+snippet bf
+	\textbf{${1}}
+snippet tt
+	\texttt{${1}}
+#beamer templates
+snippet sl1
+	\begin{frame}{${1:title}}
+	\framesubtitle{${2:subtutle}}
+	${3:content}
+	\end{frame}
+snippet sl2
+	\begin{frame}{${1:title}}
+	\framesubtitle{${2:subtutle}}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+		${3:content}
+		\end{column}
+		\begin{column}{0.5\textwidth}  %%<--- here
+		\end{column}
+		${4:content}
+		\end{columns}
+	\end{frame}
+snippet $
+	$$ ${1} $$
+snippet inp
+	\input{${1:filename}}
+snippet cite
+	\cite{${1:ref}}
+snippet ref
+	\ref{${1:ref}}

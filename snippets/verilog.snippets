@@ -1,0 +1,130 @@
+# if statement
+snippet if
+	if (${1:cond}) begin
+		${2}
+	end
+# If/else statements
+snippet ife
+	if (${1:cond}) begin
+		${2}
+	end
+	else begin
+		${3}
+	end
+# Else if statement
+snippet eif
+	else if (${1}) begin
+		${0}
+	end
+#Else statement
+snippet el
+	else begin
+		${0}
+	end
+# While statement
+snippet wh
+	while (${1}) begin
+		${0}
+	end
+# Repeat Loop
+snippet rep
+	repeat (${1}) begin
+		${0}
+	end
+# Case statement
+snippet case
+	case (${1:/* variable */})
+		${2:/* value */}: begin
+			${3}
+		end
+		default: begin
+			${4}
+		end
+	endcase
+# CaseZ statement
+snippet casez
+	casez (${1:/* variable */})
+		${2:/* value */}: begin
+			${3}
+		end
+		default: begin
+			${4}
+		end
+	endcase
+# Always block
+snippet al
+	always @(${1:/* sensitive list */}) begin
+		${2}
+	end
+# Module block
+snippet mod
+	module ${1:module_name} (
+	${2}
+	);
+	${0}
+
+
+	endmodule
+#parameter
+snippet pa
+	parameter ${1:S0} = ${2:2'b00};
+	${3}
+#define
+snippet	def
+	`define ${1}	${2}
+	${3}
+#parameter
+snippet par
+	parameter ${1}	=	${2}
+	${3}
+snippet pos
+	posedge	${1:i_clk}
+snippet neg
+	negedge	${1:i_clk}
+snippet mach
+	always@(*) begin: next_state_bl
+		case(current_state)		//Snopsys full_case_paralell_case
+			${1:STATE_0}:
+			begin
+				if(${2:i_data}) 
+				begin
+					${3:some_stuff}
+				end
+				else
+				begin
+					${4:other_stuff}
+				end
+			end
+		${5:other_cases}
+		endcase	//end next_state_bl
+	end
+
+snippet caso
+	STATE_${1:0}:
+		begin
+			if(${2:i_data}) 
+			begin
+				${3:some_stuff}
+			end
+			else
+			begin
+				${4:other_stuff}
+			end
+		end
+		${5}
+snippet comb
+	always@(${1:i_clk}) begin
+		if(${2:i_reset}) 
+		begin
+			${3}
+		end
+		else
+		begin
+			${4}
+		end
+		${5}
+	end
+snippet time
+	`timescale ${1:1ns}/${2:100ps}
+
+
