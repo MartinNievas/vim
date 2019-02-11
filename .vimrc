@@ -8,6 +8,16 @@ execute pathogen#infect()
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+set t_Co=256
+
+
+
+""Colores del identado
+" set list
+" set listchars=tab:>-
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=blue   ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
 
 
 set encoding=utf-8
@@ -15,6 +25,8 @@ set encoding=utf-8
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
+
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -38,7 +50,7 @@ set smarttab
 
 " 1 tab == 2 spaces
 set shiftwidth=2
-set tabstop=2
+set tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -85,13 +97,20 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+
 " " Smart way to move between windows
 :map <Tab> <ESC>:tabn<RETURN>
 :map <S-Tab> <ESC>:tabprevious<RETURN>
 " "Para cambiar el color de fondo cuando muetro la pantalla a través del
 " proyector
+:map <c-K> <ESC>:IndentGuidesToggle<RETURN>
 :map <c-L> <ESC>:colorscheme shine<RETURN>
 :map <c-O> <ESC>:colorscheme mine<RETURN>
+:map <c-M> <ESC>:TagbarToggle<CR>
 
 
 "" Resaltado de sibtaxis en la búsqueda
@@ -118,4 +137,3 @@ colorscheme mine
  let g:airline_left_alt_sep = ''
  let g:airline_right_sep = ''
  let g:airline_right_alt_sep = ''
-
