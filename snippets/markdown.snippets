@@ -1,0 +1,72 @@
+###########################################################################
+#                            Markdown Snippets                            #
+###########################################################################
+
+#############
+#  Headers  #
+#############
+
+
+#############
+#    Code   #
+#############
+snippet code
+	\`\`\`${1}
+	${0:${VISUAL}}
+	\`\`\`
+
+
+###########
+#  Links  #
+###########
+
+snippet lnk "Inline Link"
+	[${1}](${2})$0
+
+##############
+#  Emphasis  #
+##############
+
+############
+#  Quotes  #
+############
+
+###########
+#  Lists  #
+###########
+
+snippet ol "Ordered List"
+	1. ${1}
+	2. ${2}
+	3. ${3}
+	4. ${4}
+	$0
+
+snippet ul "Unordered List"
+	* ${1}
+	* ${2}
+	* ${3}
+	* ${4}
+	$0
+
+
+############
+#  Images  #
+############
+
+snippet img! "Image"
+	![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
+
+############
+#  Tables  #
+############
+
+snippet table "Table"
+	${1:First Header}   | ${6:First Header}
+	--------------------|--------------------
+	${2:Content Cell}   | ${7:Content Cell}
+	${3:Content Cell}   | ${8:Content Cell}
+	${4:Content Cell}   | ${9:Content Cell}
+	${5:Content Cell}   | ${10:Content Cell}
+	$0
+

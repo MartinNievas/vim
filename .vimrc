@@ -24,17 +24,18 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=blue   ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
 
+let g:jedi#completions_enabled = 0
+
 " Things for LaTex
   set grepprg=grep\ -nH\ $*
   let g:tex_flavor='latex'
   let g:Tex_DefaultTargetFormat='pdf'
-  let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+  " let g:Tex_FormatDependency_pdf = 'dvi,pdf'
   let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
   let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
-  " let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-style $*'
-  let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
-
-
+  let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
+  " let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
+  " let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
 
 " Set to auto read when a file is changed from the outside
   set autoread
