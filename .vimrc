@@ -27,6 +27,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
 let g:jedi#completions_enabled = 0
 
 " Things for LaTex
+  let g:Tex_ViewRule_pdf = 'evince'
   set grepprg=grep\ -nH\ $*
   let g:tex_flavor='latex'
   let g:Tex_DefaultTargetFormat='pdf'
@@ -46,7 +47,7 @@ let g:jedi#completions_enabled = 0
   let g:mapleader = ","
 
 " Fast saving
-  nmap <leader>w :w!<cr>
+  nmap <leader>w :w<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
