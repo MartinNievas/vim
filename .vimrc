@@ -31,12 +31,12 @@ let g:jedi#completions_enabled = 0
   set grepprg=grep\ -nH\ $*
   let g:tex_flavor='latex'
   let g:Tex_DefaultTargetFormat='pdf'
-  " let g:Tex_FormatDependency_pdf = 'dvi,pdf'
-  let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
-  let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
-  let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
-  " let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
-  " let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
+  let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+  let g:Tex_MultipleCompileFormats='pdf,dvi,pdf'
+  let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
+  let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
+  " let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
+  " let g:Tex_CompileRule_dvi = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
 
 " Set to auto read when a file is changed from the outside
   set autoread
@@ -56,11 +56,13 @@ let g:jedi#completions_enabled = 0
   set expandtab
 
 " Be smart when using tabs ;)
-  set smarttab
+set smarttab
 
 " 1 tab == 2 spaces
-  set shiftwidth=2
-  set tabstop=4
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+" set shiftwidth=4
+" set tabstop=4
+set noai
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
