@@ -11,15 +11,15 @@ set encoding=utf-8
 
 " Colors
   colorscheme mine
-  
+
   execute pathogen#infect()
 " Enable filetype plugins
   filetype plugin on
   filetype indent on
 
 ""Colores del identado
-" set list
-" set listchars=tab:>-
+set list
+set listchars=tab:>·,trail:·
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=blue   ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
