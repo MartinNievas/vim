@@ -134,7 +134,7 @@ set noai
 "" Resaltado de sibtaxis en la búsqueda
   :set hls
   nnoremap <F3> :set hlsearch!<RETURN>
-  noremap <F5> :set list!<CR>
+  nnoremap <F6> :set list!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
