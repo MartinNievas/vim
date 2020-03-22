@@ -5,6 +5,7 @@
 set history=500
 
 set encoding=utf-8
+syntax on
 
 " Some basics:
   set number relativenumber
