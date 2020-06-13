@@ -16,7 +16,7 @@ if version < 600
   so <sfile>:p:h/cpp.vim
 else
   runtime! syntax/cpp.vim
-  unlet b:current_syntax
+  " unlet b:current_syntax
 endif
 
 " CUDA keywords
