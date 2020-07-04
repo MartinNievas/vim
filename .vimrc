@@ -132,7 +132,7 @@ set noai
   :map <F4> <ESC>:TagbarToggle<RETURN>
 
 
-"" Resaltado de sibtaxis en la búsqueda
+"" Resaltado de sintaxis en la búsqueda
   :set hls
   nnoremap <F3> :set hlsearch!<RETURN>
   nnoremap <F6> :set list!<CR>
