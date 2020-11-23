@@ -18,6 +18,10 @@ syntax on
   filetype plugin on
   filetype indent on
 
+" Markdown preview
+  let vim_markdown_preview_github=1
+  let vim_markdown_preview_browser='Firefox'
+
 ""Colores del identado
 set list
 set listchars=tab:>·,trail:·
@@ -32,12 +36,13 @@ let g:jedi#completions_enabled = 0
   set grepprg=grep\ -nH\ $*
   let g:tex_flavor='latex'
   let g:Tex_DefaultTargetFormat='pdf'
-  let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+  " let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+  let g:Tex_FormatDependency_pdf = 'pdf'
   let g:Tex_MultipleCompileFormats='pdf,dvi,pdf'
-  let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
-  let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
-  " let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
-  " let g:Tex_CompileRule_dvi = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
+  " let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
+  " let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
+  let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
+  let g:Tex_CompileRule_dvi = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
 
 " Set to auto read when a file is changed from the outside
   set autoread

@@ -25,3 +25,8 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 echo "clone vim-fugitive"
 cd ~/.vim/bundle
 git clone https://github.com/tpope/vim-fugitive.git
+
+echo "clone vim-markdown-preview"
+cd ~/.vim/bundle
+git clone https://github.com/MartinNievas/vim-markdown-preview.git
+
