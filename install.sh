@@ -14,6 +14,10 @@ echo "clone nercommenter"
 cd ~/.vim/bundle
 git clone https://github.com/preservim/nerdcommenter.git
 
+echo "clone nertree"
+cd ~/.vim/bundle
+git clone https://github.com/preservim/nerdtree.git
+
 echo "clone vim-airline"
 cd ~/.vim/bundle
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
