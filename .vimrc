@@ -21,6 +21,7 @@ syntax on
 " Markdown preview
   let vim_markdown_preview_github=1
   let vim_markdown_preview_browser='Firefox'
+  let vim_markdown_preview_hotkey='<C-p>'
 
 ""Colores del identado
 set list
@@ -38,7 +39,7 @@ let g:jedi#completions_enabled = 0
   let g:Tex_DefaultTargetFormat='pdf'
   " let g:Tex_FormatDependency_pdf = 'dvi,pdf'
   let g:Tex_FormatDependency_pdf = 'pdf'
-  let g:Tex_MultipleCompileFormats='pdf,dvi,pdf'
+  let g:Tex_MultipleCompileFormats='dvi,pdf'
   " let g:Tex_CompileRule_dvi = 'latex -shell-escape -interaction=nonstopmode -file-line-error $*.tex'
   " let g:Tex_CompileRule_pdf = 'dvipdf $*.dvi tmplatexsuite.pdf; mv tmplatexsuite.pdf $*.pdf'
   let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -file-line-error-style $*'
