@@ -34,3 +34,9 @@ echo "clone vim-markdown-preview"
 cd ~/.vim/bundle
 git clone https://github.com/MartinNievas/vim-markdown-preview.git
 
+echo "clone gruvbox"
+cd ~/.vim/bundle
+git clone https://github.com/morhetz/gruvbox.git
+
+
+
