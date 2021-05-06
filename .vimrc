@@ -8,15 +8,21 @@ set encoding=utf-8
 syntax on
 
 " Some basics:
-  set number relativenumber
-
-" Colors
-  colorscheme mine
+  set number
+  set relativenumber
 
   execute pathogen#infect()
 " Enable filetype plugins
   filetype plugin on
   filetype indent on
+
+" Colors
+  " colorscheme mine
+  colorscheme gruvbox
+  set background=dark    " Setting dark mode
+  let g:gruvbox_contrast_dark = "dark"
+  " let g:gruvbox_number_column = "none"
+  " let g:gruvbox_color_column = "none"
 
 " Markdown preview
   let vim_markdown_preview_github=1
@@ -27,8 +33,8 @@ syntax on
 set list
 set listchars=tab:>·,trail:·
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=blue   ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=blue   ctermbg=234
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green  ctermbg=234
 
 let g:jedi#completions_enabled = 0
 
@@ -114,7 +120,7 @@ set noai
   set laststatus=2
 
 " Set 256 color mode
-  set t_Co=256
+  " set t_Co=256
 
 " Airline config
   let g:airline_theme='dark'
@@ -132,9 +138,10 @@ set noai
 
 ""Para cambiar el color de fondo cuando muetro la pantalla a través del
 " proyector
-  :map <c-K> <ESC>:IndentGuidesToggle<RETURN>
-  :map <c-L> <ESC>:colorscheme shine<RETURN>
-  :map <c-O> <ESC>:colorscheme mine<RETURN>
+  " :map <c-K> <ESC>:IndentGuidesToggle<RETURN>
+  :map <c-L> <ESC>:colorscheme mine<RETURN>
+  :map <c-O> <ESC>:colorscheme gruvbox\|let g:gruvbox_contrast_dark = "soft" <RETURN>
+  :map <c-K> <ESC>:colorscheme gruvbox\|let g:gruvbox_contrast_dark = "dark" <RETURN>
   :map <F4> <ESC>:TagbarToggle<RETURN>
 
 
