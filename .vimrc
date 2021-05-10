@@ -17,10 +17,10 @@ syntax on
   filetype indent on
 
 " Colors
-  " colorscheme mine
-  colorscheme gruvbox
-  set background=dark    " Setting dark mode
-  let g:gruvbox_contrast_dark = "dark"
+  colorscheme mine
+  " set background=dark    " Setting dark mode
+  " let g:gruvbox_contrast_dark = "soft"
+  " let g:gruvbox_number_column = "bg0"
   " let g:gruvbox_number_column = "none"
   " let g:gruvbox_color_column = "none"
 
@@ -140,8 +140,8 @@ set noai
 " proyector
   " :map <c-K> <ESC>:IndentGuidesToggle<RETURN>
   :map <c-L> <ESC>:colorscheme mine<RETURN>
-  :map <c-O> <ESC>:colorscheme gruvbox\|let g:gruvbox_contrast_dark = "soft" <RETURN>
-  :map <c-K> <ESC>:colorscheme gruvbox\|let g:gruvbox_contrast_dark = "dark" <RETURN>
+  " :map <c-O> <ESC>:let gruvbox_contrast_dark = "soft" <RETURN>
+  " :map <c-K> <ESC>:let g:gruvbox_contrast_dark = "dark" <RETURN>
   :map <F4> <ESC>:TagbarToggle<RETURN>
 
 
